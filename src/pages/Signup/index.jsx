@@ -96,6 +96,7 @@ const SignupPage = () => {
               variant="contained"
               type="submit"
               disabled={!isConfirmPasswordMatch}
+              fullWidth
             >
               Create Account
             </Button>

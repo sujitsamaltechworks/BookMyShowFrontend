@@ -1,0 +1,73 @@
+.admin-dashboard-container {
+  display: flex;
+
+  .sidebar {
+    width: 200px;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    line-height: 24px;
+  }
+
+  .main-content {
+    width: 100%;
+    min-height: 100%;
+    padding: 10px;
+  }
+
+  .sidebar .sidebar-item {
+    margin-top: 16px;
+  }
+
+  .sidebar .sidebar-item ul {
+    list-style: none;
+  }
+
+  .sidebar .sidebar-item ul li {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+  }
+
+  .sidebar .sidebar-item ul li:hover {
+    background: #333333;
+  }
+
+  .sidebar-item .active {
+    background: #333333;
+  }
+}
+
+.create-theatre-container,
+.create-movie-container {
+  display: flex;
+  .create-theatre-form, .create-movie-form {
+    width: 60%;
+    padding: 8px;
+  }
+  .form-row {
+    margin-top: 16px;
+  }
+  .create-theatre-cards,
+  .create-movie-cards {
+    height: 90vh;
+    overflow-y: auto;
+    padding: 8px;
+    background-color: beige;
+    border-radius: 10px;
+    ul {
+      list-style: none;
+    }
+    .theatre-card-item,
+    .movie-card-item {
+      margin: 8px;
+      display: inline-block;
+      p {
+        word-break: break-all;
+        white-space: normal;
+      }
+    }
+  }
+}
