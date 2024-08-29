@@ -42,6 +42,7 @@ function CreateTheatreForm() {
 
   return (
     <Box component="form" onSubmit={handleFormSubmit}>
+      <Typography variant="h3">Create Theatre</Typography>
       <div className="form-row">
         <TextField
           value={name}
@@ -121,7 +122,7 @@ function CreateTheatreForm() {
       </div>
       <div className="form-row">
         <Button variant="contained" type="submit" fullWidth>
-          Create Account
+          ADD THEATRE
         </Button>
       </div>
     </Box>
@@ -140,17 +141,15 @@ const CreateTheatreTab = () => {
         <ul>
           {theatres?.map((theatre) => (
             <li className="theatre-card-item" key={theatre._id}>
-              <pre>
-                <TheatreCard
-                  name={theatre.name}
-                  plot={theatre.plot}
-                  street={theatre.street}
-                  city={theatre.city}
-                  state={theatre.state}
-                  country={theatre.country}
-                  pincode={theatre.pinCode}
-                />
-              </pre>
+              <TheatreCard
+                name={theatre.name}
+                plot={theatre.plot}
+                street={theatre.street}
+                city={theatre.city}
+                state={theatre.state}
+                country={theatre.country}
+                pincode={theatre.pinCode}
+              />
             </li>
           ))}
         </ul>

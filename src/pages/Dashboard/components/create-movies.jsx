@@ -33,6 +33,7 @@ function CreateMovieForm() {
 
   return (
     <Box component="form" onSubmit={handleFormSubmit}>
+      <Typography variant="h3">Create Movie</Typography>
       <div className="form-row">
         <TextField
           value={title}
@@ -88,7 +89,7 @@ function CreateMovieForm() {
       </div>
       <div className="form-row">
         <Button variant="contained" type="submit" fullWidth>
-          Create Account
+          Add MOVIE
         </Button>
       </div>
     </Box>
@@ -107,15 +108,13 @@ const CreateMovieTab = () => {
         <ul>
           {movies?.map((movie) => (
             <li className="movie-card-item" key={movie._id}>
-              <pre>
-                <MovieCard
-                  title={movie.title}
-                  description={movie.description}
-                  language={movie.language}
-                  imageUrl={movie.imageURL}
-                  duration={movie.durationInMinutes}
-                />
-              </pre>
+              <MovieCard
+                title={movie.title}
+                description={movie.description}
+                language={movie.language}
+                imageUrl={movie.imageURL}
+                duration={movie.durationInMinutes}
+              />
             </li>
           ))}
         </ul>

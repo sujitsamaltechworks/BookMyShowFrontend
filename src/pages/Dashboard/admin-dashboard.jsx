@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./styles.css";
 import CreateTheatreTab from "./components/create-theatre";
 import CreateMovieTab from "./components/create-movies";
+import CreateTheatreHallTab from "./components/create-theatre-hall";
 
 const AdminDashboard = () => {
   const [selectedTab, setSelectedTab] = useState("create-theatre");
@@ -60,6 +61,7 @@ const AdminDashboard = () => {
       <div className="main-content">
         {selectedTab === "create-theatre" && <CreateTheatreTab />}
         {selectedTab === "create-movies" && <CreateMovieTab />}
+        {selectedTab === "create-halls" && <CreateTheatreHallTab />}
       </div>
     </div>
   );
